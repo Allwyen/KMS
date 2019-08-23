@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KMS:Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/adminhome">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/viewmember">View Members</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/searchmember">Search</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/assigntask">Assign Tasks</a>
+            </li>
+            <li class="nav-item active">
+                    <a class="nav-link" href="/viewtask">View Tasks</a>
+                </li>
+            <li class="nav-item active">
+                <a class="nav-link text-danger" href="/">Log Out</a>
+            </li>
+           
+        </ul>
+    </nav>
+
+    <div class="container mt-5">
+            <div class="row">
+                <div class="col col-lg-6">
+                    <form action="/memberone" method="POST">
+                        <table class="table">
+                            <tr><td>Full Name:</td><td><input type="text" name="kname" class="form-control" id=""></td></tr>
+                            <tr><td></td><td><input type="submit" class="btn btn-primary" value="Search"></td></tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

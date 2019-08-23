@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KMS:Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/adminhome">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/viewmember">View Members</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/searchmember">Search</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/assigntask">Assign Tasks</a>
+            </li>
+            <li class="nav-item active">
+                    <a class="nav-link" href="/viewtask">View Tasks</a>
+                </li>
+            <li class="nav-item active">
+                <a class="nav-link text-danger" href="/">Log Out</a>
+            </li>
+           
+        </ul>
+    </nav>
+
+
+    <div class="card-columns p-5">
+        <% for(var i=0;i<data.length;i++){ %>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= data[i].kname %></h5>
+                        <p class="card-text"><strong>Email: </strong><%= data[i].kemail%><br><strong>Mobile: </strong><%= data[i].kmob %><br><strong>Address: </strong><%= data[i].kaddress %><br><strong>KudumbaSree Unit: </strong><%= data[i].kunit %><br><strong>DoB: </strong><%= data[i].kdob %><br><strong>District: </strong><%= data[i].kdist %><br><strong>Pincode: </strong><%= data[i].kpin %>
+                            <br>
+                            <% if(data[i].kstatus != 1){ %>
+                                <strong>KMS Status: </strong>Not a member yet [<a href="/memberstatus/<%= data[i].kemail %>/<%= data[i].kstatus %>" class="text-success">Grant Access</a>]
+
+                            <% }else{ %>
+                                <strong>KMS Status: </strong>Active [<a href="/memberstatus/<%= data[i].kemail %>/<%= data[i].kstatus %>" class="text-danger">Revoke Membership</a>]
+                                <% } %>
+                        </p>
+                    </div>
+                </div>
+        <% } %>
+    </div>
+
+</body>
+</html>
