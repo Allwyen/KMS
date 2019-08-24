@@ -64,7 +64,7 @@ app.get('/loginAPI',(req,res)=>{
   })
 })
 
-const APIurl1 = "http://localhost:4000/loginAPI"
+const APIurl1 = "http://kudumbasreems.herokuapp.com/loginAPI"
 
 app.post('/kmslogin',(req,res)=>{
   var item1 = req.body.kemail;
@@ -150,7 +150,7 @@ app.get('/viewall',(req,res)=>{
   });
 });
 
-const APIurl2 = "http://localhost:4000/viewall";
+const APIurl2 = "http://kudumbasreems.herokuapp.com/viewall";
 
 app.get('/viewmember',(req,res)=>{
   request(APIurl2,(error,response,body)=>{
@@ -179,7 +179,7 @@ app.get('/membersingle',(req,res)=>{
   });
 });
 
-const APIurl3 = "http://localhost:4000/membersingle";
+const APIurl3 = "http://kudumbasreems.herokuapp.com/membersingle";
 
 app.post('/memberone',(req,res)=>{
   const x= req.body.kname;
@@ -230,7 +230,7 @@ app.get('/workall',(req,res)=>{
   });
 });
 
-const APIUrl4 = "http://localhost:4000/workall";
+const APIUrl4 = "http://kudumbasreems.herokuapp.com/workall";
 
 app.get('/viewtask',(req,res)=>{
   request(APIUrl4,(error,response,body)=>{
@@ -273,7 +273,7 @@ app.get('/setstatus',(req,res)=>{
   
 });
 
-const APIUrl5 = "http://localhost:4000/setstatus";
+const APIUrl5 = "http://kudumbasreems.herokuapp.com/setstatus";
 
 app.get('/memberstatus/:kemail/:kstatus',(req,res)=>{
   const x= req.params.kemail;
@@ -298,7 +298,7 @@ app.get('/taskall',(req,res)=>{
   });
 });
 
-const APIUrl6 = "http://localhost:4000/taskall"
+const APIUrl6 = "http://kudumbasreems.herokuapp.com/taskall"
 
 app.get('/viewtask',(req,res)=>{
   request(APIUrl6,(error,response,body)=>{
@@ -324,7 +324,7 @@ app.get('/checkuser',(req,res)=>{
   });
 });
 
-const APIUrl7 = "http://localhost:4000/checkuser";
+const APIUrl7 = "http://kudumbasreems.herokuapp.com/checkuser";
 
 app.get('/userhome/:kemail',(req,res)=>{
   const x = req.params.kemail;
@@ -350,7 +350,7 @@ app.get('/checktask',(req,res)=>{
   });
 });
 
-const APIUrl8 = "http://localhost:4000/checktask";
+const APIUrl8 = "http://kudumbasreems.herokuapp.com/checktask";
 
 
 app.get('/usertask/:kemail',(req,res)=>{
@@ -396,7 +396,7 @@ app.get('/taskstatus',(req,res)=>{
   
 });
 
-const APIUrl9 = "http://localhost:4000/taskstatus";
+const APIUrl9 = "http://kudumbasreems.herokuapp.com/taskstatus";
 
 app.get('/usertaskall/:id/:kwstatus',(req,res)=>{
   const x= req.params.id;
